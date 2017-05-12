@@ -9,5 +9,9 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
-platformBrowserDynamic().bootstrapModule(App1Module);
+
+window["run"] = function(appName: any) {
+  platformBrowserDynamic([{provide: 'AppName', useValue: appName }])
+   .bootstrapModule(AppModule);
+}
+

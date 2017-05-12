@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-import { App1Component } from './app1.component';
+import { App2Component } from './app2.component';
 
 @NgModule({
   declarations: [
-    App1Component
+    App2Component
   ],
   imports: [
     BrowserModule,
@@ -17,8 +17,8 @@ import { App1Component } from './app1.component';
     NgbModule.forRoot()
   ],
   providers: [],
-  bootstrap: [App1Component]
+  bootstrap: [App2Component]
 })
-export class App1Module { }
+export class App2Module { }
 
 
