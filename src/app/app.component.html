@@ -1,11 +1,5 @@
-<div class="col-md-12">
-
-  <div *ngIf="appName == 'app1'">
-    <app1-root></app1-root>
-  </div>
-
-  <div *ngIf="appName == 'app2'">
-    <app2-root></app2-root>
-  </div>
-
+<div class="col-md-12" [ngSwitch]="appName">
+    <app1-root *ngSwitchCase="'app1'"></app1-root>
+    <app2-root *ngSwitchCase="'app2'"></app2-root>
+    <div class="alert alert-danger" role="alert" *ngSwitchDefault><strong>DOH!</strong> Application {{appName}} not found</div>
 </div>
